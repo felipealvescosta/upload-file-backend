@@ -4,13 +4,17 @@ const morgan = require("morgan");
 const mongoose = require('mongoose');
 const path = require('path'); 
 const cors = require('cors');
+const Sentry = require('@sentry/node');
 
 const app = express(); 
+
+Sentry.init({ dsn: process.env.SENTRY });
 
 mongoose.connect(process.env.DATABASE_URL,{
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
+
 
 app.use(cors());
 app.use(express.json());
