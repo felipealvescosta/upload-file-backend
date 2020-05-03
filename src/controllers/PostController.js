@@ -1,11 +1,10 @@
 const Post = require('../models/Post');
 
 module.exports = {
-  async index(req,res){
+  async index(res){
     const posts = await Post.find();
     return res.json(posts);
   },
-
 
   async create(req, res){
     const {originalname:name, size, key, location: url = '' } = req.file;
@@ -17,7 +16,6 @@ module.exports = {
     });
     return  res.json(post);
   },
-
   
   async delete(req,res){
     const post = await Post.findById(req.params.id);
