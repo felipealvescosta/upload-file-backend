@@ -11,6 +11,10 @@ module.exports = {
     
   },
 
+  async show(req, res){
+    res.json({"message":"Olá, bem vindo ao FelpsBOX API"});
+  },
+
   async create(req, res){
     const {originalname:name, size, key, location: url = '' } = req.file;
     const post  = await Post.create({

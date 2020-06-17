@@ -4,6 +4,7 @@ const multer  = require("multer");
 const multerConfig = require("./config/multer");
 const PostController = require('./controllers/PostController');
 
+routes.get('/', PostController.show);
 
 routes.get('/post', PostController.index);
 
