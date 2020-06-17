@@ -1,14 +1,6 @@
 <p align="center">
   <img src="images/felpsboxlogo%20copy.png" alt="Logo" width="20%">
-
-
   <h2 align="center">FelpsBOX API</h2>
-
-  <p align="center">
-    <br />
-    <small>My personal file list in Cloud API!</small>
-    <br />
-  </p>
 </p>
 
 
