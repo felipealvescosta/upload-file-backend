@@ -1,9 +1,14 @@
 const Post = require('../models/Post');
 
 module.exports = {
-  async index(res){
+  async index(req, res){
     const posts = await Post.find();
+    if(!posts){
+      console.log('algo deu errado!');
+    }
+    console.log(posts);
     return res.json(posts);
+    
   },
 
   async create(req, res){
